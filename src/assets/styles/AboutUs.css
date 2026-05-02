@@ -1,0 +1,80 @@
+:root {
+  --black: #121212;
+  --darkGray: #333;
+  --pink: #feb6b8;
+  --primary: #f2afa2;
+  --white: #fff;
+  --brown: #92533b;
+}
+
+.aboutUsContainer {
+  display: flex;
+  background-color: var(--primary);
+  flex-direction: column;
+  padding: 0 2em;
+}
+
+.aboutUsContainer h1 {
+  color: var(--black);
+  margin: 1em 0;
+  font-size: 3em;
+  text-align: center;
+}
+
+.aboutUsContainer h1 span, 
+.description h2 span {
+  color: var(--brown);
+}
+
+.descriptionContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 0 2em;
+  justify-content: space-between;
+}
+
+.descriptionImageContainer {
+  width: 40%;
+  border: 1em solid var(--white);
+  display: flex;
+  margin: 0 2em 3em 2em;
+}
+
+.descriptionImageContainer img {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+
+.description {
+  width: 50%;
+  margin: 0 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.description h2 {
+  font-size: 2.5em;
+  margin: 0;
+  color: var(--black);
+}
+
+.description p {
+  font-size: 1.75em;
+}
+
+@media (max-width: 758px) {
+  .descriptionContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .description {
+    width: 100%;
+    margin-bottom: 3em;
+  }
+  .descriptionImageContainer {
+    width: 70%;
+  }
+}

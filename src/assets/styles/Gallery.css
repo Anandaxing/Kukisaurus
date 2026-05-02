@@ -1,0 +1,66 @@
+:root {
+  --black: #121212;
+  --darkGray: #333;
+  --pink: #feb6b8;
+  --primary: #f2afa2;
+  --white: #fff;
+  --brown: #92533b;
+}
+
+.gallery {
+  position: relative;
+  color: var(--black);
+  padding: 2em;
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery h1 {
+  font-size: 3em;
+  margin: 0;
+  text-align: center;
+}
+
+.gallery h1 span {
+  color: var(--brown);
+}
+
+.gallery p {
+  font-size: 2em;
+  text-align: center;
+  margin: 1em 0 1.5em 0;
+}
+
+.imageGalleryContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.imageGalleryContainer img {
+  width: 24%;
+  object-fit: cover;
+  height: auto;
+  border: 0.5em solid var(--primary);
+}
+
+@media (max-width: 758px) {
+  .imageGalleryContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .imageGalleryContainer img {
+    width: 47.5%;
+  }
+}
+
+@media (max-width: 450px) {
+  .imageGalleryContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .imageGalleryContainer img {
+    width: 90%;
+  }
+}

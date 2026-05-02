@@ -1,0 +1,27 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+/* Laptop size */
+@media (max-width: 1366px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+/* Tablet size */
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+/* Phone size */
+@media (max-width: 450px ) {
+  html {
+    font-size: 55%;
+  }
+}

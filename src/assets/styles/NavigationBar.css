@@ -1,0 +1,183 @@
+:root {
+  --black: #121212;
+  --darkGray: #333;
+  --pink: #feb6b8;
+  --primary: #f2afa2;
+  --white: #fff;
+  --brown: #92533b;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5em 2em;
+  background-color: transparent;
+  position: fixed;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 300;
+  transition: 0.2s;
+  user-select: none;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  align-items: center;
+}
+
+.pagination a {
+  font-size: 1.7em;
+  text-decoration: none;
+  color: var(--white);
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  border-radius: 10em;
+}
+
+.pagination a:hover {
+  background-color: var(--brown);
+  color: var(--white);
+}
+
+.profileImageContainer {
+  width: 7em;
+  margin-right: 3em;
+  height: auto;
+  display: flex;
+}
+
+.profileImageContainer img {
+  width: 100%;
+  height: auto;
+  border: 0.2em solid var(--white);
+  border-radius: 10em;
+  user-select: none;
+}
+
+.scrollMode {
+  background-color: var(--brown);
+}
+
+.menu {
+  align-items: center;
+  display: none;
+  transition: 0.2s;
+  user-select: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.menuBtn {
+  display: none;
+  font-size: 4em;
+  color: var(--black);
+  z-index: 250;
+}
+
+.colorWhite {
+  color: var(--white);
+}
+
+.dnone {
+  display: none !important;
+}
+
+.dblock {
+  display: block;
+  border-radius: 0.1em;
+}
+
+#menu-btn {
+  border-radius: 0.1em;
+}
+
+#menu-btn:hover {
+  background-color: var(--white);
+  color: var(--brown);
+}
+
+#menu-btn:active {
+  transition: 0.2s;
+}
+
+#menu-btn:active::after {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--brown);
+}
+
+#close-btn {
+  border-radius: 0.1em;
+}
+
+#close-btn:hover {
+  color: var(--white);
+  background-color: var(--brown);
+}
+
+.active {
+  transform: translateX(0) !important;
+}
+
+.waButton {
+  cursor: pointer;
+  position: fixed;
+  bottom: 0.75em;
+  right: 0.75em;
+  z-index: 300;
+  height: 1.75em;
+  width: 1.75em;
+  font-size: 3em;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: #25d366;
+  border-radius: 2em;
+}
+
+.waButton:hover {
+  background-color: #128c7e;
+}
+
+.waButton:active {
+  color: var(--darkGray);
+  background-color: var(--white);
+}
+
+@media (max-width: 758px) {
+  .pagination {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    margin: 0;
+    left: 0;
+    top: 0;
+    padding: 8em 0;
+    height: 100vh;
+    transform: translateX(-20em);
+    transition: 0.3s;
+  }
+  .pagination a {
+    margin: 0;
+    width: 7.5em;
+    color: var(--darkGray);
+    text-align: left;
+  }
+  .pagination a:hover {
+    background-color: var(--brown);
+    border-radius: 0;
+  }
+  .menu {
+    display: flex;
+  }
+  #menu-btn {
+    display: block;
+  }
+}
